@@ -62,12 +62,12 @@
     <div class="new-release img text">
         <img src="{% static 'img/p.jpg' %}" alt="new-release">
         <div class="song-details">
-            <div class="song-name">Ber habar Premyera</div>
+            <div class="song-name">Ber habar</div>
             <div class="singer-name">T1murov_19</div>
             <div class="music-player">
                 <div class="play-song">
                     <img src="{% static 'img/play.png' %}" alt="play" data-song="darkfire" class="hover">
-                    <audio src="{% static 'music/premyera.mp3' %}" data-audio="darkfire"></audio> <!--LINK AND NAME OF AUDIO YOU WANT TO PLAY-->
+                    <audio src="{% static 'music/ber.mp3' %}" data-audio="darkfire"></audio> <!--LINK AND NAME OF AUDIO YOU WANT TO PLAY-->
                 </div>
                 <div class="all-songs">
                     <a href="{% url 'resume:songs' %}" title="All Songs"><i class="gg-arrow-right"></i></a>
@@ -87,9 +87,9 @@
     </div>
     <ul class="navigation-ul">
                <li><a href="" data-text="Bosh sahifa" data-img="{% static 'img/a.png' %}">Bosh sahifa</a></li>
-                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/about-img.jpg' %}">Malumot</a></li>
-                <li><a href="{% url 'resume:songs' %}" data-text="Musiqa" data-img="{% static 'img/album-thumbnail-nine.jpg' %}">Musiqa</a></li>
-                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/album-thumbnail-four.jpg' %}">Aloqa</a></li>
+                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/photo22.jpg' %}">Malumot</a></li>
+                <li><a href="{% url 'resume:songs' %}" data-text="Musiqa" data-img="{% static 'img/a.png' %}">Musiqa</a></li>
+                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/message.jpg' %}">Aloqa</a></li>
     </ul>
     <div class="navigation-close hover about-close opacity">
         <div class="navigation-close-line"></div>
