@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T19</title>
+
+    {% load static %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!--favicon-img-->
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}">
+    <!--favicon-img-->
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <style>
+
+    </style>
+
+</head>
+<body>
+<main id="contact-one">
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor scale"></div>
+    <div class="cursor-two scale"></div>
+    <!-- CUSTOM CURSOR -->
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="p">
+            <img src="{% static 'img/headphone.png' %}" alt="headphone">
+        </div>
+        <div class="p">T1murov_19</div>
+    </div>
+    <!-- PRELOADER -->
+
+    <div id="contact-one-content">
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <div class="logo hover">
+                <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+            </div>
+            <div class="menu-bar hover">
+                <div class="menu-bar-name text">Menu</div>
+                <div class="menu-bar-lines text">
+                    <div class="menu-bar-line"></div>
+                    <div class="menu-bar-line"></div>
+                </div>
+            </div>
+        </div>
+        <!-- NAVIGATION -->
+
+        <!-- HEADING -->
+        <div class="heading">
+            <div class="text">ALOQA</div>
+        </div>
+        <!-- HEADING -->
+
+        <div id="flex-row">
+            <!-- CONTACT FORM -->
+            <div id="contact-form">
+                <div id="form" class="opacity-contact">
+                    <form action="{% url 'resume:contact' %}" method="post">
+                        {% csrf_token %}
+                        <div class="mb-1">
+                            {{ form.name.label_tag }}
+                            {{ form.name }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.message.label_tag }}
+                            {{ form.message }}
+                        </div>
+                        <button type="submit" id="submit" class="hover">Send</button>
+                        <div id="message-error" style="display:none;">Invalid email</div>
+                    </form>
+                </div>
+            </div>
+            <!-- CONTACT FORM -->
+
+            <!-- ENQUIRY MAIL -->
+           <div id="collaboration-mail" class="opacity-contact">
+                <div class="circular-text">
+                    <span id="rotated">T1MUROV T1MUROV * &nbsp;&nbsp;&nbsp;&nbsp; T1MUROV T1MUROV * &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <div class="mail">
+                    <a href="mailto:INFO@GMAIL.COM">T1murov_19</a>
+                </div>
+            </div>
+            <!-- ENQUIRY MAIL -->
+        </div>
+
+        <!-- HEADPHONE IMG -->
+        <div class="headphone img text">
+            <img src="{% static 'img/headphone.png' %}" title="headphone zone" class="text" alt="headphone">
+        </div>
+        <!-- HEADPHONE IMG -->
+
+        <!-- progress-bar -->
+        <div class="progress-bar-container fade-in">
+            <div class="progressbar"></div>
+        </div>
+        <!-- progress-bar -->
+    </div>
+
+    <!-- NAVIGATION CONTENT -->
+    <div class="navigation-content">
+        <div class="navigation-logo hover opacity">
+            <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+        </div>
+        <ul class="navigation-ul">
+               <li><a href="{% url 'resume:home' %}" data-text="Bosh sahifa" data-img="{% static 'img/bg-img-three.jpg' %}">Bosh sahifa</a></li>
+                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/about-img.jpg' %}">Malumot</a></li>
+                <li><a href="{% url 'resume:songs' %}" data-text="Musiqa" data-img="{% static 'img/album-thumbnail-nine.jpg' %}">Musiqa</a></li>
+                <li><a href="" data-text="Aloqa" data-img="{% static 'img/album-thumbnail-four.jpg' %}">Aloqa</a></li>
+        </ul>
+        <div class="navigation-close hover about-close opacity">
+            <div class="navigation-close-line"></div>
+            <div class="navigation-close-line"></div>
+        </div>
+
+        <div class="project-preview"></div>
+
+        <!-- HEADPHONE IMG -->
+        <div class="headphone-navigation opacity">
+            <img src="{% static 'img/headphone.png' %}" title="headphone zone" class="text" alt="headphone">
+        </div>
+        <!-- HEADPHONE IMG -->
+
+        <!-- SOCIAL MEDIA LINKS -->
+        <!-- SOCIAL MEDIA LINKS -->
+    </div>
+    <!-- NAVIGATION CONTENT -->
+</main>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/circletype.min.js' %}"></script>
+<script src="{% static 'js/jquery.lettering.js' %}"></script>
+<script src="{% static 'js/bez.js' %}"></script>
+<script src="{% static 'js/pace.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

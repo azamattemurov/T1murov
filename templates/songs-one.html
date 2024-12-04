@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T19</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+       <!--favicon-img-->
+       <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}">
+       <!--favicon-img-->
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+<body>
+    <main id="songs-one">
+        <div class="cursor scale"></div>
+        <div class="cursor-two scale"></div>
+
+        <div id="preloader">
+            <div class="p">
+                <img src="{% static 'img/headphone.png' %}" alt="headphone">
+            </div>
+            <div class="p">T1murov_19</div>
+        </div>
+
+<!-- CONTENT -->
+        <div id="songs-one-content">
+
+
+            <!-- NAVIGATION -->
+            <div class="navigation">
+                <div class="logo hover">
+                    <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+                </div>
+                <div class="menu-bar hover ">
+                    <div class="menu-bar-name text">
+                        Menu
+                    </div>
+                    <div class="menu-bar-lines text">
+                        <div class="menu-bar-line"></div>
+                        <div class="menu-bar-line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION -->
+
+            <!-- HEADING -->
+            <div class="heading">
+                <div class="text">
+                    Musiqalar
+                </div>
+            </div>
+            <!-- HEADING -->
+
+            <!-- SONGS CONTAINER -->
+            <div class="center">
+                <div id="songs-container">
+
+                    <!-- SONG -->
+                   <div class="songs-list">
+                    {% for song in songs %}
+                    <div class="song fade-up">
+
+                        <div class="song-img">
+                            <img src="{{ song.album_thumbnail.url }}" alt="song">
+                        </div>
+
+                        <div class="song-details">
+                            <div class="song-details-content">
+                                <div class="song-name">{{ song.song_name }}</div>
+                                <div class="artist-name">{{ song.artist_name }}</div>
+                            </div>
+                            <div class="music-player">
+                                <div class="play-song mouse">
+                                    <!-- play-pause tugmasi -->
+                                    <img id="play-pause-img-{{ song.id }}" src="{% static 'img/play.png' %}" alt="play" class="play-pause-img" data-song="{{ song.song_name }}">
+                                    <!-- DATA-SONG AND DATA-AUDIO VALUE SHOULD MATCH -->
+                                    <audio id="audio-{{ song.id }}" data-audio="{{ song.song_name }}">
+                                        <source src="{{ song.audio_file.url }}" type="audio/ogg">
+                                        <source src="{{ song.audio_file.url }}" type="audio/mp3">
+                                    </audio>
+                                </div>
+                                <div class="download-song mouse">
+                                    <a href="{{ song.audio_file.url }}" download="{{ song.song_name }} - {{ song.artist_name }}">
+                                        <span></span><img src="{% static 'img/download.png' %}" alt="download">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+                    <div class="music-indicator">
+                        <span style="--i:1;" class="music-indicator-span"></span>
+                        <span style="--i:2;" class="music-indicator-span "></span>
+                        <span style="--i:3;" class="music-indicator-span "></span>
+                        <span style="--i:4;" class="music-indicator-span "></span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- SONGS CONTAINER -->
+
+            <!-- HEADPHONE IMG -->
+            <!-- HEADPHONE IMG -->
+
+            <!-- MUSIC INDICATOR -->
+            <!-- MUSIC INDICATOR -->
+
+            <!-- progress-bar -->
+            <div class="progress-bar-container fade-in">
+                <div class="progressbar"></div>
+            </div>
+            <!-- progress-bar -->
+
+        </div>
+        <!-- CONTENT -->
+
+        <!-- NAVIGATION CONTENT -->
+
+        <div class="navigation-content">
+            <div class="navigation-logo hover opacity">
+                <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+            </div>
+            <ul class="navigation-ul">
+               <li><a href="{% url 'resume:home' %}" data-text="Bosh sahifa" data-img="{% static 'img/bg-img-three.jpg' %}">Bosh sahifa</a></li>
+                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/about-img.jpg' %}">Malumot</a></li>
+                <li><a href="" data-text="Musiqa" data-img="{% static 'img/album-thumbnail-nine.jpg' %}">Musiqa</a></li>
+                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/album-thumbnail-four.jpg' %}">Aloqa</a></li>
+            </ul>
+            <div class="navigation-close hover about-close opacity">
+                <div class="navigation-close-line"></div>
+                <div class="navigation-close-line"></div>
+            </div>
+
+            <div class="project-preview"></div>
+
+            <!-- HEADPHONE IMG -->
+            <div class="headphone-navigation opacity">
+                <img src="{% static 'img/headphone.png' %}" title="headphone zone" class="text" alt="headphone">
+            </div>
+            <!-- HEADPHONE IMG -->
+
+        </div>
+        <!-- NAVIGATION CONTENT -->
+
+    </main>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bez.js' %}"></script>
+    <script src="{% static 'js/pace.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

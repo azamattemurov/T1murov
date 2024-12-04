@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent Successfully</title>
+    <style>
+       body {
+    background-color: violet;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 69vh;
+    margin: 0;
+}
+
+.success-container {
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 60%;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-icon {
+    width: 100%;
+    max-width: 400px;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.success-icon img {
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 20px; /* Yozuv o'lchami */
+    font-family: 'Arial', sans-serif; /* Yozuv uslubi */
+    font-weight: bold; /* Yozuv qalinligi */
+    color: white; /* Yozuv rangi */
+    margin: 30px 0; /* Yozuvning yuqori va pastki qismidagi bo'shliq */
+    text-align: center; /* Matnni markazlashtirish */
+    text-transform: uppercase; /* Matnni katta harflar bilan yozish */
+    letter-spacing: 1px; /* Harflar orasidagi masofa */
+}
+
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .success-container {
+        padding: 2px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-content">
+            <div class="success-icon">
+                <img src="{% static 'img/spucces.gif' %}" alt="Success">
+            </div>
+            <h1>Habar jonatildi</h1>
+            <button id="goBackButton" class="btn">Orqaga</button>
+        </div>
+    </div>
+    <script>
+                document.getElementById('goBackButton').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

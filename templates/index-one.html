@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T19</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
+        <!--favicon-img--> 
+        <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}">
+        <!--favicon-img-->
+    
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+<body>
+    <!-- MAIN CONTENT -->
+    <main id="index-one">
+
+          <!-- CUSTOM CURSOR -->
+          <div class="cursor scale"></div>
+          <div class="cursor-two scale"></div>
+          <!-- CUSTOM CURSOR -->
+
+        <!-- PRELOADER -->
+        <div id="preloader">
+                <img src="{% static 'img/headphone.png' %}" alt="headphone">
+                <div class="p">T1murov_19</div>
+        </div>
+        <!-- PRELOADER -->
+
+<!-- HEADER -->
+<div id="header">
+
+    <!-- NAVIGATION -->
+    <div class="navigation">
+        <div class="logo hover ">
+           <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1umurov_19</a>
+        </div>
+        <div class="menu-bar hover ">
+            <div class="menu-bar-name text">
+                Menu
+            </div>
+            <div class="menu-bar-lines text">
+                <div class="menu-bar-line"></div>
+                <div class="menu-bar-line"></div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVIGATION -->
+
+
+    <!-- HEADPHONE IMG -->
+    <div class="headphone img text">
+        <img src="{% static 'img/headphone.png' %}"  class="text" alt="headphone">
+    </div>
+    <!-- HEADPHONE IMG -->
+
+    <!-- NEW RELEASE -->
+    <div class="new-release img text">
+        <img src="{% static 'img/p.jpg' %}" alt="new-release">
+        <div class="song-details">
+            <div class="song-name">Ber habar Premyera</div>
+            <div class="singer-name">T1murov_19</div>
+            <div class="music-player">
+                <div class="play-song">
+                    <img src="{% static 'img/play.png' %}" alt="play" data-song="darkfire" class="hover">
+                    <audio src="{% static 'music/premyera.mp3' %}" data-audio="darkfire"></audio> <!--LINK AND NAME OF AUDIO YOU WANT TO PLAY-->
+                </div>
+                <div class="all-songs">
+                    <a href="{% url 'resume:songs' %}" title="All Songs"><i class="gg-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEW RELEASE -->
+
+</div>
+<!-- HEADER -->
+
+<!-- NAVIGATION CONTENT -->
+<div class="navigation-content">
+    <div class="navigation-logo hover opacity">
+        <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+    </div>
+    <ul class="navigation-ul">
+               <li><a href="" data-text="Bosh sahifa" data-img="{% static 'img/a.png' %}">Bosh sahifa</a></li>
+                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/about-img.jpg' %}">Malumot</a></li>
+                <li><a href="{% url 'resume:songs' %}" data-text="Musiqa" data-img="{% static 'img/album-thumbnail-nine.jpg' %}">Musiqa</a></li>
+                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/album-thumbnail-four.jpg' %}">Aloqa</a></li>
+    </ul>
+    <div class="navigation-close hover about-close opacity">
+        <div class="navigation-close-line"></div>
+        <div class="navigation-close-line"></div>
+    </div>
+
+    <div class="project-preview"></div>
+
+    <!-- HEADPHONE IMG -->
+    <div class="headphone-navigation opacity">
+        <img src="{% static 'img/headphone.png' %}" title="headphone zone" class="text" alt="headphone">
+    </div>
+    <!-- HEADPHONE IMG -->
+
+    <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-media-links-navigation">
+        <ul>
+            <li ><a href="#"  class="text hover opacity">YT</a></li>
+            <li ><a href="#"  class="text hover opacity">FB</a></li>
+            <li ><a href="#"  class="text hover opacity">IG</a></li>
+        </ul>
+    </div>
+    <!-- SOCIAL MEDIA LINKS -->
+
+</div>
+
+<!-- NAVIGATION CONTENT -->
+</main>
+<!-- MAIN CONTENT -->
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bez.js' %}"></script>
+<script src="{% static 'js/pace.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>
