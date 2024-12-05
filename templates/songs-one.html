@@ -35,7 +35,7 @@
             <!-- NAVIGATION -->
             <div class="navigation">
                 <div class="logo hover">
-                    <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
+                    <a href="https://taplink.cc/t1murov_19" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
                 </div>
                 <div class="menu-bar hover ">
                     <div class="menu-bar-name text">
@@ -65,7 +65,6 @@
                    <div class="songs-list">
                     {% for song in songs %}
                     <div class="song fade-up">
-
                         <div class="song-img">
                             <img src="{{ song.album_thumbnail.url }}" alt="song">
                         </div>
@@ -130,10 +129,10 @@
                 <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
             </div>
             <ul class="navigation-ul">
-               <li><a href="{% url 'resume:home' %}" data-text="Bosh sahifa" data-img="{% static 'img/bg-img-three.jpg' %}">Bosh sahifa</a></li>
-                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/about-img.jpg' %}">Malumot</a></li>
-                <li><a href="" data-text="Musiqa" data-img="{% static 'img/album-thumbnail-nine.jpg' %}">Musiqa</a></li>
-                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/album-thumbnail-four.jpg' %}">Aloqa</a></li>
+                       <li><a href="{% url 'resume:home' %}" data-text="Bosh sahifa">Bosh sahifa</a></li>
+                        <li><a href="{% url 'resume:about' %}" data-text="Malumot">Malumot</a></li>
+                        <li><a href="{% url 'resume:songs' %}" data-text="Musiqa">Musiqa</a></li>
+                        <li><a href="{% url 'resume:contact' %}" data-text="Aloqa">Aloqa</a></li>
             </ul>
             <div class="navigation-close hover about-close opacity">
                 <div class="navigation-close-line"></div>

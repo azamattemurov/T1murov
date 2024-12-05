@@ -37,7 +37,7 @@
     <!-- NAVIGATION -->
     <div class="navigation">
         <div class="logo hover ">
-           <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1umurov_19</a>
+           <a href="https://taplink.cc/t1murov_19" target="_blank" rel="noopener noreferrer" class="text">T1umurov_19</a>
         </div>
         <div class="menu-bar hover ">
             <div class="menu-bar-name text">
@@ -60,14 +60,14 @@
 
     <!-- NEW RELEASE -->
     <div class="new-release img text">
-        <img src="{% static 'img/p.jpg' %}" alt="new-release">
+        <img src="{% static 'img/maxresdefault (2).jpg' %}" alt="new-release">
         <div class="song-details">
-            <div class="song-name">Ber habar</div>
-            <div class="singer-name">T1murov_19</div>
+            <div class="song-name">O'ylab ko'r</div>
+            <div class="singer-name">T1murov_19 ft Nabiimy</div>
             <div class="music-player">
                 <div class="play-song">
                     <img src="{% static 'img/play.png' %}" alt="play" data-song="darkfire" class="hover">
-                    <audio src="{% static 'music/ber.mp3' %}" data-audio="darkfire"></audio> <!--LINK AND NAME OF AUDIO YOU WANT TO PLAY-->
+                    <audio src="{% static "music/O'ylab ko'r - 2.mp3" %}" data-audio="darkfire"></audio> <!--LINK AND NAME OF AUDIO YOU WANT TO PLAY-->
                 </div>
                 <div class="all-songs">
                     <a href="{% url 'resume:songs' %}" title="All Songs"><i class="gg-arrow-right"></i></a>
@@ -86,10 +86,11 @@
         <a href="https://www.instagram.com/t1murov_19/" target="_blank" rel="noopener noreferrer" class="text">T1murov_19</a>
     </div>
     <ul class="navigation-ul">
-               <li><a href="" data-text="Bosh sahifa" data-img="{% static 'img/a.png' %}">Bosh sahifa</a></li>
-                <li><a href="{% url 'resume:about' %}" data-text="Malumot" data-img="{% static 'img/photo22.jpg' %}">Malumot</a></li>
-                <li><a href="{% url 'resume:songs' %}" data-text="Musiqa" data-img="{% static 'img/a.png' %}">Musiqa</a></li>
-                <li><a href="{% url 'resume:contact' %}" data-text="Aloqa" data-img="{% static 'img/message.jpg' %}">Aloqa</a></li>
+        <li><a href="{% url 'resume:home' %}" data-text="Bosh sahifa">Bosh sahifa</a></li>
+        <li><a href="{% url 'resume:about' %}" data-text="Malumot">Malumot</a></li>
+        <li><a href="{% url 'resume:songs' %}" data-text="Musiqa">Musiqa</a></li>
+        <li><a href="{% url 'resume:contact' %}" data-text="Aloqa">Aloqa</a></li>
+
     </ul>
     <div class="navigation-close hover about-close opacity">
         <div class="navigation-close-line"></div>
@@ -99,20 +100,9 @@
     <div class="project-preview"></div>
 
     <!-- HEADPHONE IMG -->
-    <div class="headphone-navigation opacity">
-        <img src="{% static 'img/headphone.png' %}" title="headphone zone" class="text" alt="headphone">
-    </div>
-    <!-- HEADPHONE IMG -->
-
-    <!-- SOCIAL MEDIA LINKS -->
-    <div class="social-media-links-navigation">
-        <ul>
-            <li ><a href="#"  class="text hover opacity">YT</a></li>
-            <li ><a href="#"  class="text hover opacity">FB</a></li>
-            <li ><a href="#"  class="text hover opacity">IG</a></li>
-        </ul>
-    </div>
-    <!-- SOCIAL MEDIA LINKS -->
+    <a href="{% url 'resume:songs' %}" title="headphone zone" class="text" alt="headphone">
+        <img src="{% static 'img/headphone.png' %}" alt="headphone">
+    </a>
 
 </div>
 

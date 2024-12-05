@@ -28,7 +28,8 @@ class SongListView(ListView):
     context_object_name = 'songs'
 
     def get_queryset(self):
-        return Song.objects.all()
+        # Faollashtirilgan qo'shiqlarni olish
+        return Song.objects.filter(audio_file__isnull=False)
 
 
 class SongDownloadView(View):
