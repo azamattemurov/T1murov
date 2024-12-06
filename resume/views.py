@@ -29,20 +29,16 @@ class SongListView(ListView):
     context_object_name = 'songs'
 
     def get_queryset(self):
-        # Faqat audio fayli mavjud bo'lgan faollashtirilgan qo'shiqlarni qaytaradi
         return Song.objects.filter(audio_file__isnull=False)
 
 
 class SongDownloadView(View):
     def get(self, request, pk, *args, **kwargs):
-        # Qo'shiqni id orqali olish
         song = get_object_or_404(Song, pk=pk)
 
-        # Yuklab olish hisobini oshirish
         song.download_count += 1
         song.save()
 
-        # Audio faylni javob sifatida yuborish
         response = HttpResponse(song.audio_file, content_type='audio/mpeg')
         response['Content-Disposition'] = f'attachment; filename="{song.song_name}.mp3"'
         return response

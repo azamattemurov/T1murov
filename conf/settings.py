@@ -64,12 +64,11 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'n41azamat',
-        'PORT': '5432',
-        'PASSWORD': 'n41azamat',
-        'HOST': 'localhost',
-        'USER': 'n41azamat',
-
+        'NAME': config('DB_NAME'),
+        'PORT': config('DB_PORT'),
+        'PASSWORD': config('DB_PASS'),
+        'HOST': config('DB_HOST'),
+        'USER': config('DB_USER'),
     }
 }
 
