@@ -62,38 +62,61 @@
                 <div id="songs-container">
 
                     <!-- SONG -->
-                   <div class="songs-list">
-                    {% for song in songs %}
                     <div class="song fade-up">
-                        <div class="song-img">
-                            <img src="{{ song.album_thumbnail.url }}" alt="song">
-                        </div>
 
+                        <div class="song-img">
+                            <img src="{% static 'img/800x800cc.jpg' %}" alt="song">
+                        </div>
+                    
                         <div class="song-details">
                             <div class="song-details-content">
-                                <div class="song-name">{{ song.song_name }}</div>
-                                <div class="artist-name">{{ song.artist_name }}</div>
+                            <div class="song-name">Ne sabab</div>
+                            <div class="artist-name">T1murov ft Nabiimy</div>
                             </div>
                             <div class="music-player">
+                             
                                 <div class="play-song mouse">
-                                    <!-- play-pause tugmasi -->
-                                    <img id="play-pause-img-{{ song.id }}" src="{% static 'img/play.png' %}" alt="play" class="play-pause-img" data-song="{{ song.song_name }}">
-                                    <!-- DATA-SONG AND DATA-AUDIO VALUE SHOULD MATCH -->
-                                    <audio id="audio-{{ song.id }}" data-audio="{{ song.song_name }}">
-                                        <source src="{{ song.audio_file.url }}" type="audio/ogg">
-                                        <source src="{{ song.audio_file.url }}" type="audio/mp3">
-                                    </audio>
+                                    <img src="images/play.png" alt="play" data-song="blindinglights">
+                                    <!--   DATA-SONG AND DATA-AUDIO VALUE SHOULD MATCH   -->
+                                    <audio data-audio="blindinglights">
+                                        <source src="{% static 'music/Ne sabab.mp3' %}" type="audio/ogg">
+                                        <source src="{% static 'music/Ne sabab.mp3' %}" type="audio/mp3">
+                                        </audio> 
                                 </div>
                                 <div class="download-song mouse">
-                                    <a href="{{ song.audio_file.url }}" download="{{ song.song_name }} - {{ song.artist_name }}">
-                                        <span></span><img src="{% static 'img/download.png' %}" alt="download">
-                                    </a>
+                                    <a href="{% static 'music/Ne sabab.mp3' %}"  download="T1murov_19 ft Nabiimy - Ne sabab"><img src="{% static 'img/download.png' %}" alt="download"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                </div>
+                    
+                    <div class="song fade-up">
+
+                        <div class="song-img">
+                            <img src="{% static 'img/maxresdefault (2).jpg' %}" alt="song">
+                        </div>
+                    
+                        <div class="song-details">
+                            <div class="song-details-content">
+                            <div class="song-name">O'ylab ko'r</div>
+                            <div class="artist-name">T1murov ft Nabiimy</div>
+                            </div>
+                            <div class="music-player">
+                             
+                                <div class="play-song mouse">
+                                    <img src="{% static 'img/play.png' %}" alt="play" data-song="blindinglights">
+                                    <!--   DATA-SONG AND DATA-AUDIO VALUE SHOULD MATCH   -->
+                                    <audio data-audio="blindinglights">
+                                        <source src="{% static "music/O'ylab ko'r - 2.mp3" %}" type="audio/ogg">
+                                        <source src="{% static "music/O'ylab ko'r - 2.mp3" %}" type="audio/mp3">
+                                        </audio> 
+                                </div>
+                                <div class="download-song mouse">
+                                    <a href="{% static "music/O'ylab ko'r - 2.mp3" %}"  download="T1murov_19 ft Nabiimy - O'ylab ko'r"><img src="{% static 'img/download.png' %}" alt="download"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="music-indicator">
